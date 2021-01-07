@@ -1,0 +1,27 @@
+{% extends 'shop/basic.html'%}
+
+{% block title%}Contact - MyAwesomeCart{% endblock %}
+{% block body%}
+<div class="jumbotron">
+   <h2>Contact Us </h2>
+    <form action="/shop/contact/" method="post">{% csrf_token %}
+        <div class="form-group">
+            <label for="name">Enter your Name</label>
+            <input type="name" class="form-control" id="name" name="name" placeholder="Enter your Name">
+        </div>
+        <div class="form-group">
+            <label for="email">Enter your Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone No.</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your Phone No.">
+        </div>
+        <div class="form-group">
+            <label for="desc">Enter Description</label>
+            <textarea class="form-control" id="desc" name="desc" rows="3" placeholder="Write Your Query"></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+</div>
+{% endblock%}
